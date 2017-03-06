@@ -1,0 +1,4 @@
+Title		Story					Priority
+ImgUpload	Jan drags and drops image into app.	High
+TextAdd         Joe adds text to a selected image	High
+EmailOutput	Jill emails Joe an Image+Text		High
