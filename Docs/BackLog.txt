@@ -2,3 +2,16 @@ Title		Story					Priority
 ImgUpload	Jan drags and drops image into app.	High
 TextAdd         Joe adds text to a selected image	High
 EmailOutput	Jill emails Joe an Image+Text		High
+WebCam		Jan Captures an image from her webcam	Medium-High
+TextPlacement	Joe adjusts the placement of text.	Medium
+		(Select text + click and drag corners)
+TextSize	Joe Scales the added text (+/-).	Medium
+TextColor	Jan Puts Orange text on her captured	Medium
+		image.
+ColorPicker	Jan is provided a color pallet for	Medium
+		text color options.
+Justify		Jill emails Jan 3 versions of the same	Medium
+		postcard, one left justified, one right
+		and the third centered.
+TextElimination	Steve upoloads a postcard and removes	Low
+		the text.
