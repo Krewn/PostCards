@@ -1,0 +1,138 @@
+/* CSS declarations go here */
+
+
+mashup:ra:colle…ime-type…:1169
+.kmbs article, .kmbs aside, .kmbs details, .kmbs figcaption, .kmbs figure, .kmbs
+ .kmbs footer, .kmbs header, .kmbs hgroup, .kmbs menu, .kmbs nav, .kmbs section {
+    display: block;
+}
+mashup:ra:colle…ime-type…:1156
+.kmbs, .kmbs div, .kmbs span, .kmbs applet, .kmbs object, .kmbs iframe, .kmbs h1, .kmbs h2, .kmbs h3, .kmbs h4, .kmbs h5, .kmbs h6, .kmbs p, .kmbs blockquote, .kmbs pre, .kmbs a, .kmbs abbr, .kmbs acronym, .kmbs address, .kmbs big, .kmbs cite, .kmbs code, .kmbs del, .kmbs dfn, .kmbs em, .kmbs img, .kmbs ins, .kmbs kbd, .kmbs q, .kmbs s, .kmbs samp, .kmbs small, .kmbs strike, .kmbs strong, .kmbs sub, .kmbs sup, .kmbs tt, .kmbs var, .kmbs b, .kmbs u, .kmbs i, .kmbs center, .kmbs dl, .kmbs dt, .kmbs dd, .kmbs ol, .kmbs ul, .kmbs li, .kmbs fieldset, .kmbs form, .kmbs label, .kmbs legend, .kmbs table, .kmbs caption, .kmbs tbody, .kmbs tfoot, .kmbs thead, .kmbs tr, .kmbs th, .kmbs td, .kmbs article, .kmbs aside, .kmbs canvas, .kmbs details, .kmbs embed, .kmbs
+ .kmbs figure, .kmbs figcaption, .kmbs footer, .kmbs header, .kmbs hgroup, .kmbs
+ .kmbs menu, .kmbs nav, .kmbs output, .kmbs ruby, .kmbs section, .kmbs summary, .kmbs time, .kmbs mark, .kmbs audio, .kmbs video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+mashup:ra:colle…ime-type…:1136
+article, aside, footer, header, hgroup, nav, section {
+    display: block;
+}
+mashup:ra:colle…n&mime-type…:1
+article, aside, footer, header, hgroup, nav, section {
+    display: block;
+}
+foundation.min.…005d-5d4f-4…:1
+*, *:before, *:after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+}
+*, *:before, *:after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: content-box;
+}
+user agent stylesheet
+article, aside, footer, header, hgroup, main, nav, section {
+    display: block;
+}
+Inherited from div.kmbs
+mashup:ra:colle…ime-type…:1210
+.kmbs {
+    font-family: HelveticaNeueLTPro-Roman, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5em;
+    color: #333;
+    background-color: #FFFFFF;
+}
+mashup:ra:colle…ime-type…:1172
+.kmbs {
+    line-height: 1;
+}
+mashup:ra:colle…ime-type…:1146
+.kmbs, .kmbs div, .kmbs span, .kmbs applet, .kmbs object, .kmbs iframe, .kmbs h1, .kmbs h2, .kmbs h3, .kmbs h4, .kmbs h5, .kmbs h6, .kmbs p, .kmbs blockquote, .kmbs pre, .kmbs a, .kmbs abbr, .kmbs acronym, .kmbs address, .kmbs big, .kmbs cite, .kmbs code, .kmbs del, .kmbs dfn, .kmbs em, .kmbs img, .kmbs ins, .kmbs kbd, .kmbs q, .kmbs s, .kmbs samp, .kmbs small, .kmbs strike, .kmbs strong, .kmbs sub, .kmbs sup, .kmbs tt, .kmbs var, .kmbs b, .kmbs u, .kmbs i, .kmbs center, .kmbs dl, .kmbs dt, .kmbs dd, .kmbs ol, .kmbs ul, .kmbs li, .kmbs fieldset, .kmbs form, .kmbs label, .kmbs legend, .kmbs table, .kmbs caption, .kmbs tbody, .kmbs tfoot, .kmbs thead, .kmbs tr, .kmbs th, .kmbs td, .kmbs article, .kmbs aside, .kmbs canvas, .kmbs details, .kmbs embed, .kmbs
+ .kmbs figure, .kmbs figcaption, .kmbs footer, .kmbs header, .kmbs hgroup, .kmbs
+ .kmbs menu, .kmbs nav, .kmbs output, .kmbs ruby, .kmbs section, .kmbs summary, .kmbs time, .kmbs mark, .kmbs audio, .kmbs video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+Inherited from body#content.lotusui30dojo.tundra.locale_en.toolbar-closed
+mashup:ra:colle…ime-type…:1136
+body#content {
+    background-color: #ededed;
+    color: #222;
+    font: 75%/1.5 Arial,Helvetica,sans-serif;
+    margin: 0;
+    padding: 0;
+}
+injected stylesheet
+html.eotss_enabled.eotss_slow body {
+    text-rendering: optimizeLegibility;
+}
+injected stylesheet
+html.eotss_enabled body {
+    font-feature-settings: 'clig' 1, 'onum' 1;
+}
+mashup:ra:colle…n&mime-type…:1
+body.lotusui30dojo {
+    font: 75% / 1.5 Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #222222;
+    background: #ffffff;
+    background-image: none;
+}
+foundation.min.…005d-5d4f-4…:1
+body {
+    background: #fff;
+    color: #222;
+    cursor: auto;
+    font-family: "Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+foundation.min.…005d-5d4f-4…:1
+html, body {
+    font-size: 100%;
+}
+Inherited from html.eotss_enabled.eotss_slow
+foundation.min.…005d-5d4f-4…:1
+html, body {
+    font-size: 100%;
+}
+Pseudo ::before element
+foundation.min.…005d-5d4f-4…:1
+*, *:before, *:after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+}
+*, *:before, *:after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: content-box;
+}
+Pseudo ::after element
+foundation.min.…005d-5d4f-4…:1
+*, *:before, *:after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+}
+*, *:before, *:after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: content-box;
+}
