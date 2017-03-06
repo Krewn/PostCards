@@ -1,17 +1,24 @@
-Title		Story					Priority
-ImgUpload	Jan drags and drops image into app.	High
-TextAdd         Joe adds text to a selected image	High
-EmailOutput	Jill emails Joe an Image+Text		High
-WebCam		Jan Captures an image from her webcam	Medium-High
-TextPlacement	Joe adjusts the placement of text.	Medium
+Title		Story					Priority	Status
+ImgUpload	Jan drags and drops image into app.	High		Incomplete
+TextAdd         Joe adds text to a selected image	High		Incomplete
+EmailOutput	Jill emails Joe an Image+Text		High		Incomplete
+WebCam		Jan Captures an image from her webcam	Medium-High	Incomplete
+TextPlacement	Joe adjusts the placement of text.	Medium		Incomplete
 		(Select text + click and drag corners)
-TextSize	Joe Scales the added text (+/-).	Medium
-TextColor	Jan Puts Orange text on her captured	Medium
+TextSize	Joe Scales the added text (+/-).	Medium		Incomplete
+TextColor	Jan Puts Orange text on her captured	Medium		Incomplete
 		image.
-ColorPicker	Jan is provided a color pallet for	Medium
+FontSelection	Ajay puts comic-sans text on his img.	Medium		Incomplete
+ColorPicker	Jan is provided a color pallet for	Medium		Incomplete
 		text color options.
-Justify		Jill emails Jan 3 versions of the same	Medium
+Justify		Jill emails Jan 3 versions of the same	Medium		Incomplete
 		postcard, one left justified, one right
 		and the third centered.
-TextElimination	Steve upoloads a postcard and removes	Low
+EmailLogin	Jim Logs in with an email account.	Medium-Low	Incomplete
+G+Login		Juan Logs in with Google+.		Medium-Low	Incomplete
+Save Image	Juli saves a post card to her account	Medium-Low	Incomplete
+		for later.
+CropImage	Ajay crops an uploaded image sending.	Low		Incomplete
+BWImage		Ajay makes his image black and white.	Low		Incomplete
+TextElimination	Steve upoloads a postcard and removes	Pin		Incomplete
 		the text.
