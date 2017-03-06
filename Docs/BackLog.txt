@@ -1,7 +1,7 @@
 Title		Story					Priority	Status
 ImgUpload	Jan drags and drops image into app.	High		Incomplete
-TextAdd         Joe adds text to a selected image	High		Incomplete
-EmailOutput	Jill emails Joe an Image+Text		High		Incomplete
+TextAdd         Joe adds text to a selected image.	High		Incomplete
+EmailOutput	Jill emails Joe an Image+Text.		High		Incomplete
 WebCam		Jan Captures an image from her webcam	Medium-High	Incomplete
 TextPlacement	Joe adjusts the placement of text.	Medium		Incomplete
 		(Select text + click and drag corners)
@@ -14,8 +14,8 @@ ColorPicker	Jan is provided a color pallet for	Medium		Incomplete
 Justify		Jill emails Jan 3 versions of the same	Medium		Incomplete
 		postcard, one left justified, one right
 		and the third centered.
-EmailLogin	Jim Logs in with an email account.	Medium-Low	Incomplete
-G+Login		Juan Logs in with Google+.		Medium-Low	Incomplete
+EmailLogin	Jim logs-in with an email account.	Medium-Low	Incomplete
+G+Login		Juan logs-in with Google+.		Medium-Low	Incomplete
 Save Image	Juli saves a post card to her account	Medium-Low	Incomplete
 		for later.
 CropImage	Ajay crops an uploaded image sending.	Low		Incomplete
