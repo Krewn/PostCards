@@ -47,9 +47,12 @@
 
 <template name="frame">
   {{> PreviewCanvas}}
-  {{> TextFactory}}
-  {{> ImageSelector}}
-  {{> Emailer}}
+  <div class = "subContent">
+    {{> Cropper}}
+    {{> TextFactory}}
+    {{> ImageSelector}}
+    {{> Emailer}}
+  </div>
 </template>
 
 <template name = "Emailer">
@@ -60,15 +63,43 @@
 </template>
 
 <template name="PreviewCanvas">
-  <canvas id="myCanvas" height=715 width = 450></canvas>
+  <canvas id="myCanvas" height=715 width = 450 data-left=0 data-top=0></canvas>
   <input id="inp" type='file'>
   <img id="img" width=0 height=0>
+</template>
+
+<template name = "Cropper">
+  <table>
+    <tr>
+      <td></td>
+      <td class = "topPlus">+</td>
+      <td class  = "topMinus">-</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td class  = "leftPlus">+</td>
+      <td></td>
+      <td></td>
+      <td class  = "rightPlus">+</td>
+    </tr>
+    <tr>
+      <td class  = "leftMinus">-</td>
+      <td></td>
+      <td></td>
+      <td class  = "rightMinus">-</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td class  = "bottomPlus">+</td>
+      <td class  = "bottomMinus">-</td>
+      <td></td>
+    </tr>
+  </table>
 </template>
 
 <template name = "TextFactory">
   <button>New Text</button>
 </template>
-
 <template name = "TextBox">
 
 </template>
