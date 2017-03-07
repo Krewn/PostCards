@@ -87,14 +87,12 @@ Template.Cropper.events({
     canvas.width+=10;
     canvas.setAttribute("data-left", parseInt(canvas.getAttribute("data-left"))+10);
     redraw(canvas);
-    console.log(canvas.getAttribute("data-left"));
   },
   'click .topPlus': function(event, template){
     var canvas = document.getElementById("myCanvas");
     canvas.height+=10;
     canvas.setAttribute("data-top",parseInt(canvas.getAttribute("data-top"))+10);
     redraw(canvas);
-    console.log(canvas.getAttribute("data-top"));
   },
 });
 Template.logo.helpers({
