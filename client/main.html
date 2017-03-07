@@ -39,9 +39,9 @@
   <div class = "navbar">
     {{> logo}}<br>
     {{> loginButtons align="left"}}<br>
-    {{> Cropper}}
   </div>
   <div class = "pageContent">
+    {{> Cropper}}
     {{> frame}}
   </div>
 </body>
@@ -63,7 +63,7 @@
 </template>
 
 <template name="PreviewCanvas">
-  <canvas id="myCanvas" height=715 width = 450 data-left=0 data-top=0 data-cropperInc=10 style="border:1px solid #123456;"></canvas>
+  <canvas id="myCanvas" height=515 width = 350 data-left=0 data-top=0 data-cropperInc=10 style="border:1px solid #123456;"></canvas>
   <input id="inp" type='file'>
   <img id="img" width=0 height=0>
 </template>
@@ -100,19 +100,33 @@
 
 <template name = "TextFactory">
   {{#each textElements}}
-    <p>hey!</p>
+    <div>
+      {{> TextBox}}
+    </div>
   {{/each}}
-  <button>New Text</button>
+  <button id="newTextBoxBtn">More Text</button>
 </template>
 <template name = "TextBox">
-
+  <form action="/action_page.php">
+    Text:<br>
+    <input type="text" name="Text" value="Your Message">
+    <br>
+    Width:<br>
+    <input type="number" name="TextWidth" value=250>
+    <br>
+    LeftMargin:<br>
+    <input type="number" name="LeftMargin" value=15>
+    <br>
+    TopMargin:<br>
+    <input type="number" name="TopMargin" value=15>
+    <br><br>
+  </form>
 </template>
 
 <template name = "ImageSelector">
   {{#each images}}
-    <p>you!</p>
+    <p>mk</p>
   {{/each}}
-  <p>I know you're a good girl</p>
 </template>
 
 <template name="logo">

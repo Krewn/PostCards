@@ -48,7 +48,12 @@ function redraw(c){
   var canvas = document.getElementById("myCanvas");
   var ctx = canvas.getContext("2d");
   ctx.drawImage(image, a, b);
+  ctx.font = '42px serif';
+  ctx.fillText('TestFill', 10, 50);
 }
+Template.PreviewCanvas.rendered = function(){
+  redraw(document.getElementById("myCanvas"));
+};
 Template.Cropper.events({
   'click .rightPlus': function(event, template){
     var canvas = document.getElementById("myCanvas");
@@ -96,32 +101,43 @@ Template.Cropper.events({
   },
 });
 function sAppend(sname,anArray){
-  let temp = Session.get("TextFactoryTextBoxes");
-  try{
-    for(var k in anArray){
-      temp.push(k);
-    }
-  }catch(e){
-    temp = [];
-    for(var k in anArray){
-      temp.push(k);
-    }
+  let temp = Array(Session.get(sname));
+  for(var k in anArray){
+    temp.push(k);
   }
   Session.set("TextFactoryTextBoxes",k);
 }
 Template.TextFactory.onCreated(function() {
   Session.set("TextFactoryTextBoxes", []);
-  sAppend("TextFactoryTextBoxes",["test"]) ;
+  sAppend("TextFactoryTextBoxes",[""]);
 });
 Template.TextFactory.helpers({
-  textElements: Array(Session.get("TextFactoryTextBoxes")),
+  textElements(){return(Array(Session.get("TextFactoryTextBoxes")))},
+  newTextBox(){
+    sAppend("TextFactoryTextBoxes",[""]);
+  },
+});
+Template.TextFactory.events({
+  'click #newTextBoxBtn': function(){
+    console.log("fired");
+    sAppend("TextFactoryTextBoxes",["1"]);
+    redraw(document.getElementById("myCanvas"));
+  }
+});
+Template.TextBox.events({
+  'submit'(event){
+
+  }
 });
 Template.ImageSelector.onCreated(function() {
   Session.set( "ImageSelectorImages", []);
   sAppend("ImageSelectorImages",["test"]) ;
 });
 Template.ImageSelector.helpers({
-  images: Array(Session.get("ImageSelectorImages")),
+  images(){return(Array(Session.get("ImageSelectorImages")))},
+  addImage(i){
+    sAppend("ImageSelectorImages",[i]);
+  },
 });
 Template.logo.helpers({
   logoSrc() {
