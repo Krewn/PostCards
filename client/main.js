@@ -41,7 +41,9 @@ Template.PreviewCanvas.events({
       }
     },
 });
-function redraw(a,b){
+function redraw(c){
+  a = c.getAttribute("data-left");
+  b = c.getAttribute("data-top");
   var image = document.getElementById("img");
   var canvas = document.getElementById("myCanvas");
   var ctx = canvas.getContext("2d");
@@ -49,50 +51,51 @@ function redraw(a,b){
 }
 Template.Cropper.events({
   'click .rightPlus': function(event, template){
-    console.log("fired");
     var canvas = document.getElementById("myCanvas");
     canvas.width+=10;
-    redraw(canvas.getAttribute("data-left"),canvas.getAttribute("data-top"));
+    redraw(canvas);
   },
   'click .rightMinus': function(event, template){
     var canvas = document.getElementById("myCanvas");
     canvas.width-=canvas.width>10?10:0;
-    redraw(canvas.getAttribute("data-left"),canvas.getAttribute("data-top"));
-  },
-  'click .leftPlus': function(event, template){
-    var canvas = document.getElementById("myCanvas");
-    canvas.width+=10;
-    canvas.setAttribute("data-left", canvas.getAttribute("data-left")+10);
-    redraw(canvas.getAttribute("data-left"),canvas.getAttribute("data-top"));
+    redraw(canvas);
   },
   'click .leftMinus': function(event, template){
     var canvas = document.getElementById("myCanvas");
     canvas.width-=10;
     canvas.setAttribute("data-left",canvas.getAttribute("data-left")-10);
-    redraw(canvas.getAttribute("data-left"),canvas.getAttribute("data-top"));
-  },
-  'click .topPlus': function(event, template){
-    var canvas = document.getElementById("myCanvas");
-    canvas.height+=10;
-    canvas.setAttribute("data-top",canvas.getAttribute("data-top")+10);
-    redraw(canvas.getAttribute("data-left"),canvas.getAttribute("data-top"));
+    redraw(canvas);
   },
   'click .topMinus': function(event, template){
     var canvas = document.getElementById("myCanvas");
     canvas.height-=10;
     canvas.setAttribute("data-top",canvas.getAttribute("data-top")-10);
-    redraw(canvas.getAttribute("data-left"),canvas.getAttribute("data-top"));
+    redraw(canvas);
   },
   'click .bottomPlus': function(event, template){
     var canvas = document.getElementById("myCanvas");
     canvas.height+=10;
-    redraw(canvas.getAttribute("data-left"),canvas.getAttribute("data-top"));
+    redraw(canvas);
   },
   'click .bottomMinus': function(event, template){
     var canvas = document.getElementById("myCanvas");
     canvas.height-=canvas.height>10?10:0;
-    redraw(canvas.getAttribute("data-left"),canvas.getAttribute("data-top"));
-  }
+    redraw(canvas);
+  },
+  'click .leftPlus': function(event, template){
+    var canvas = document.getElementById("myCanvas");
+    canvas.width+=10;
+    canvas.setAttribute("data-left", parseInt(canvas.getAttribute("data-left"))+10);
+    redraw(canvas);
+    console.log(canvas.getAttribute("data-left"));
+  },
+  'click .topPlus': function(event, template){
+    var canvas = document.getElementById("myCanvas");
+    canvas.height+=10;
+    canvas.setAttribute("data-top",parseInt(canvas.getAttribute("data-top"))+10);
+    redraw(canvas);
+    console.log(canvas.getAttribute("data-top"));
+  },
 });
 Template.logo.helpers({
   logoSrc() {
