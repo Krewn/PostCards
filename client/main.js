@@ -91,7 +91,7 @@ Template.Cropper.events({
   'click .topPlus': function(event, template){
     var canvas = document.getElementById("myCanvas");
     canvas.height+=10;
-    canvas.setAttribute("data-top",parseInt(canvas.getAttribute("data-top"))+10);
+    canvas.setAttribute("data-top", parseInt(canvas.getAttribute("data-top"))+10);
     redraw(canvas);
   },
 });

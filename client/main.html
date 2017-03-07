@@ -40,7 +40,6 @@
     {{> logo}}<br>
     {{> loginButtons align="left"}}<br>
     {{> Cropper}}
-    {{> TextFactory}}
   </div>
   <div class = "pageContent">
     {{> frame}}
@@ -50,6 +49,7 @@
 <template name="frame">
   {{> PreviewCanvas}}
   <div class = "subContent">
+    {{> TextFactory}}
     {{> ImageSelector}}
     {{> Emailer}}
   </div>
@@ -63,41 +63,43 @@
 </template>
 
 <template name="PreviewCanvas">
-  <canvas id="myCanvas" height=715 width = 450 data-left=0 data-top=0 data-cropperInc=10></canvas>
+  <canvas id="myCanvas" height=715 width = 450 data-left=0 data-top=0 data-cropperInc=10 style="border:1px solid #123456;"></canvas>
   <input id="inp" type='file'>
   <img id="img" width=0 height=0>
 </template>
 
 <template name = "Cropper">
-  <table>
+  <h3>Crop</h3>
+  <table style="width:100%">
     <tr>
       <td></td>
-      <td class = "topPlus">+</td>
-      <td class  = "topMinus">-</td>
+      <td width="25%" height="25%" class = "topPlus">+</td>
+      <td width="25%" height="25%" class = "topMinus">-</td>
       <td></td>
     </tr>
     <tr>
-      <td class  = "leftPlus">+</td>
+      <td width="25%" height="25%" class = "leftPlus">+</td>
       <td></td>
       <td></td>
-      <td class  = "rightPlus">+</td>
+      <td width="25%" height="25%" class = "rightPlus">+</td>
     </tr>
     <tr>
-      <td class  = "leftMinus">-</td>
+      <td width="25%" height="25%" class = "leftMinus">-</td>
       <td></td>
       <td></td>
-      <td class  = "rightMinus">-</td>
+      <td width="25%" height="25%" class = "rightMinus">-</td>
     </tr>
     <tr>
       <td></td>
-      <td class  = "bottomPlus">+</td>
-      <td class  = "bottomMinus">-</td>
+      <td width="25%" height="25%" class = "bottomPlus">+</td>
+      <td width="25%" height="25%" class = "bottomMinus">-</td>
       <td></td>
     </tr>
   </table>
 </template>
 
 <template name = "TextFactory">
+  
   <button>New Text</button>
 </template>
 <template name = "TextBox">
