@@ -14,8 +14,8 @@ ColorPicker	Jan is provided a color pallet for	Medium		Incomplete
 Justify		Jill emails Jan 3 versions of the same	Medium		Incomplete
 		postcard, one left justified, one right
 		and the third centered.
-EmailLogin	Jim logs-in with an email account.	Medium-Low	Incomplete
-G+Login		Juan logs-in with Google+.		Medium-Low	Incomplete
+EmailLogin	Jim logs-in with an email account.	Medium-Low	Complete
+G+Login		Juan logs-in with Google+.		Medium-Low	Complete
 Save Image	Juli saves a post card to her account	Medium-Low	Incomplete
 		for later.
 CropImage	Ajay crops an uploaded image sending.	Low		Incomplete

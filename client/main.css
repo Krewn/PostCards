@@ -1,138 +1,119 @@
-/* CSS declarations go here */
 
-
-mashup:ra:colle…ime-type…:1169
-.kmbs article, .kmbs aside, .kmbs details, .kmbs figcaption, .kmbs figure, .kmbs
- .kmbs footer, .kmbs header, .kmbs hgroup, .kmbs menu, .kmbs nav, .kmbs section {
-    display: block;
+/*http://krewn.github.io/fits.css*/
+div{
+    content:tabindex("0");
 }
-mashup:ra:colle…ime-type…:1156
-.kmbs, .kmbs div, .kmbs span, .kmbs applet, .kmbs object, .kmbs iframe, .kmbs h1, .kmbs h2, .kmbs h3, .kmbs h4, .kmbs h5, .kmbs h6, .kmbs p, .kmbs blockquote, .kmbs pre, .kmbs a, .kmbs abbr, .kmbs acronym, .kmbs address, .kmbs big, .kmbs cite, .kmbs code, .kmbs del, .kmbs dfn, .kmbs em, .kmbs img, .kmbs ins, .kmbs kbd, .kmbs q, .kmbs s, .kmbs samp, .kmbs small, .kmbs strike, .kmbs strong, .kmbs sub, .kmbs sup, .kmbs tt, .kmbs var, .kmbs b, .kmbs u, .kmbs i, .kmbs center, .kmbs dl, .kmbs dt, .kmbs dd, .kmbs ol, .kmbs ul, .kmbs li, .kmbs fieldset, .kmbs form, .kmbs label, .kmbs legend, .kmbs table, .kmbs caption, .kmbs tbody, .kmbs tfoot, .kmbs thead, .kmbs tr, .kmbs th, .kmbs td, .kmbs article, .kmbs aside, .kmbs canvas, .kmbs details, .kmbs embed, .kmbs
- .kmbs figure, .kmbs figcaption, .kmbs footer, .kmbs header, .kmbs hgroup, .kmbs
- .kmbs menu, .kmbs nav, .kmbs output, .kmbs ruby, .kmbs section, .kmbs summary, .kmbs time, .kmbs mark, .kmbs audio, .kmbs video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
+div.navbar {
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 100vw;
+	background-color: #777;
+	text-align: right;
+	opacity:  0.75;
+	z-index: 1;
+	padding: 1vh;
 }
-mashup:ra:colle…ime-type…:1136
-article, aside, footer, header, hgroup, nav, section {
-    display: block;
+div.pageContent{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 88vw;
+	margin-top: 10vh;
+	margin-left: 2vw;
+	margin-right: 10vw;
+	z-index: 0;
+	background-color: #eee;
+	opacity: 0.85;
+	box-shadow: 5px 5px 5px #000;
 }
-mashup:ra:colle…n&mime-type…:1
-article, aside, footer, header, hgroup, nav, section {
-    display: block;
+div.subContent{
+	margin-left: 2vw;
+	padding-left: 2vw;
+	background-color: white;
+	box-shadow: 5px 5px 5px #888888;
+	opacity: 0.85;
 }
-foundation.min.…005d-5d4f-4…:1
-*, *:before, *:after {
-    -webkit-box-sizing: inherit;
-    -moz-box-sizing: inherit;
-    box-sizing: inherit;
+div.bottomMargin{
+	margin-bottom:3vh;
 }
-*, *:before, *:after {
-    -webkit-box-sizing: inherit;
-    -moz-box-sizing: inherit;
-    box-sizing: content-box;
+div#background {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	top:0;
+	left: 0;
+	z-index: -1;
 }
-user agent stylesheet
-article, aside, footer, header, hgroup, main, nav, section {
-    display: block;
+font{
+	margin-top:0px;
+	margin-bottom:0px;
+	margin-left:10px;
+	margin-right:10px;
+	font-family: 'Arvo', serif;
 }
-Inherited from div.kmbs
-mashup:ra:colle…ime-type…:1210
-.kmbs {
-    font-family: HelveticaNeueLTPro-Roman, Arial, sans-serif;
-    font-size: 16px;
-    line-height: 1.5em;
-    color: #333;
-    background-color: #FFFFFF;
+a.button{
+	font-size: 160%;
+	color: #000;
+	text-decoration: none;
+	transition: color  .42 ease;
 }
-mashup:ra:colle…ime-type…:1172
-.kmbs {
-    line-height: 1;
+a.button:link{
+	color: #000;
+	transition: color  .42 ease;
+	transition: text-decoration  .5 ease;
 }
-mashup:ra:colle…ime-type…:1146
-.kmbs, .kmbs div, .kmbs span, .kmbs applet, .kmbs object, .kmbs iframe, .kmbs h1, .kmbs h2, .kmbs h3, .kmbs h4, .kmbs h5, .kmbs h6, .kmbs p, .kmbs blockquote, .kmbs pre, .kmbs a, .kmbs abbr, .kmbs acronym, .kmbs address, .kmbs big, .kmbs cite, .kmbs code, .kmbs del, .kmbs dfn, .kmbs em, .kmbs img, .kmbs ins, .kmbs kbd, .kmbs q, .kmbs s, .kmbs samp, .kmbs small, .kmbs strike, .kmbs strong, .kmbs sub, .kmbs sup, .kmbs tt, .kmbs var, .kmbs b, .kmbs u, .kmbs i, .kmbs center, .kmbs dl, .kmbs dt, .kmbs dd, .kmbs ol, .kmbs ul, .kmbs li, .kmbs fieldset, .kmbs form, .kmbs label, .kmbs legend, .kmbs table, .kmbs caption, .kmbs tbody, .kmbs tfoot, .kmbs thead, .kmbs tr, .kmbs th, .kmbs td, .kmbs article, .kmbs aside, .kmbs canvas, .kmbs details, .kmbs embed, .kmbs
- .kmbs figure, .kmbs figcaption, .kmbs footer, .kmbs header, .kmbs hgroup, .kmbs
- .kmbs menu, .kmbs nav, .kmbs output, .kmbs ruby, .kmbs section, .kmbs summary, .kmbs time, .kmbs mark, .kmbs audio, .kmbs video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
+a.button:hover{
+	color: #bbb;
+	text-decoration: underline;
 }
-Inherited from body#content.lotusui30dojo.tundra.locale_en.toolbar-closed
-mashup:ra:colle…ime-type…:1136
-body#content {
-    background-color: #ededed;
-    color: #222;
-    font: 75%/1.5 Arial,Helvetica,sans-serif;
-    margin: 0;
-    padding: 0;
+a.button:visited{
+	transition: color  .42 ease;	
+	transition: text-decoration  .5 ease;
 }
-injected stylesheet
-html.eotss_enabled.eotss_slow body {
-    text-rendering: optimizeLegibility;
+h1{
+	margin-top:0px;
+	margin-bottom:0px;
+	padding-left:0.1vw;
 }
-injected stylesheet
-html.eotss_enabled body {
-    font-feature-settings: 'clig' 1, 'onum' 1;
+h2{
+	padding-left:0.1vw;
+	margin-bottom:0px;
 }
-mashup:ra:colle…n&mime-type…:1
-body.lotusui30dojo {
-    font: 75% / 1.5 Arial, Helvetica, sans-serif;
-    margin: 0;
-    padding: 0;
-    color: #222222;
-    background: #ffffff;
-    background-image: none;
+h3{
+	padding-left:0.1vw;
 }
-foundation.min.…005d-5d4f-4…:1
-body {
-    background: #fff;
-    color: #222;
-    cursor: auto;
-    font-family: "Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    line-height: 1.5;
-    margin: 0;
-    padding: 0;
-    position: relative;
+.indent{
+	padding-left:2vw;
 }
-foundation.min.…005d-5d4f-4…:1
-html, body {
-    font-size: 100%;
+.rowImage{
+	width: 77vw;
 }
-Inherited from html.eotss_enabled.eotss_slow
-foundation.min.…005d-5d4f-4…:1
-html, body {
-    font-size: 100%;
+.circleImage{
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-ms-border-radius: 50%;
+	-o-border-radius: 50%;
+	border-radius: 50%;
+	width: 25vw;
+	float: right;
+	padding: 3vw;
 }
-Pseudo ::before element
-foundation.min.…005d-5d4f-4…:1
-*, *:before, *:after {
-    -webkit-box-sizing: inherit;
-    -moz-box-sizing: inherit;
-    box-sizing: inherit;
+.icon-link{
+	padding-left: 0.2vw;
+	padding-right: 0.2vw;
+	transition: padding-right  .3s ease;
+	transition: padding-left  .3s ease;
+	transition: color  .3s ease;
 }
-*, *:before, *:after {
-    -webkit-box-sizing: inherit;
-    -moz-box-sizing: inherit;
-    box-sizing: content-box;
+.icon-link, icon-link:visited{
+	color: #ecf0f1;
 }
-Pseudo ::after element
-foundation.min.…005d-5d4f-4…:1
-*, *:before, *:after {
-    -webkit-box-sizing: inherit;
-    -moz-box-sizing: inherit;
-    box-sizing: inherit;
+.icon-link:hover{
+	color: #2980b9;
+	transition: color  .3s ease;
+	transition: padding-right  .3s ease;
+	transition: padding-left  .3s ease;
 }
-*, *:before, *:after {
-    -webkit-box-sizing: inherit;
-    -moz-box-sizing: inherit;
-    box-sizing: content-box;
-}
+/*end http://krewn.github.io/fits.css*/
