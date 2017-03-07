@@ -36,31 +36,37 @@
 </head>
 
 <body>
-  {{> logo}}
-  {{> info}}
-  {{> loginButtons align="left"}}
+  <div class = "navbar">
+    {{> logo}}<br>
+    {{> loginButtons align="left"}}
+  </div>
+  <div class = "pageContent">
+    {{> frame}}
+  </div>
 </body>
 
-<template name="info">
-  <h2>Learn Meteor!</h2>
-  <ul>
-    <li><a href="https://www.meteor.com/try" target="_blank">Do the Tutorial</a></li>
-    <li><a href="http://guide.meteor.com" target="_blank">Follow the Guide</a></li>
-    <li><a href="https://docs.meteor.com" target="_blank">Read the Docs</a></li>
-    <li><a href="https://forums.meteor.com" target="_blank">Discussions</a></li>
-  </ul>
+<template name="frame">
+  {{> PreviewCanvas}}
+  {{> TextFactory}}
+  {{> ImageSelector}}
+  {{> Emailer}}
 </template>
 
-<template name="Frame">
-
+<template name = "Emailer">
+  <form action="TODO">
+  Email: <input type="email" name="email"><br>
+  <input type="submit" value="Send it!">
+</form>
 </template>
 
 <template name="PreviewCanvas">
-
+  <canvas id="myCanvas" height=715 width = 450></canvas>
+  <input id="inp" type='file'>
+  <img id="img" width=0 height=0>
 </template>
 
 <template name = "TextFactory">
-
+  <button>New Text</button>
 </template>
 
 <template name = "TextBox">
