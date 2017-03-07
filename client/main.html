@@ -99,7 +99,9 @@
 </template>
 
 <template name = "TextFactory">
-  
+  {{#each textElements}}
+    <p>hey!</p>
+  {{/each}}
   <button>New Text</button>
 </template>
 <template name = "TextBox">
@@ -107,7 +109,10 @@
 </template>
 
 <template name = "ImageSelector">
-
+  {{#each images}}
+    <p>you!</p>
+  {{/each}}
+  <p>I know you're a good girl</p>
 </template>
 
 <template name="logo">

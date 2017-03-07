@@ -7,9 +7,9 @@ div.navbar {
 	top: 0;
 	right: 0;
 	width: 100%;
-	background-color: #ddd;
+	background-color: #dedede;
 	text-align: left;
-	opacity:  0.325;
+	opacity:  0.425;
 	z-index: 1;
 }
 div.pageContent{
