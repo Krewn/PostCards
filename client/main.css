@@ -1,6 +1,8 @@
-/*http://krewn.github.io/fits.css*/
 div{
     content:tabindex("0");
+}
+td:hover {
+  background: #cccccc;
 }
 div.navbar {
 	position: fixed;
@@ -30,7 +32,7 @@ div.subContent{
 	padding-left: 2vw;
 	background-color: white;
 	box-shadow: 5px 5px 5px #888888;
-	opacity: 0.85;
+opacity: 0.85;
 }
 div.bottomMargin{
 	margin-bottom:3vh;
@@ -114,4 +116,3 @@ h3{
 	transition: padding-right  .3s ease;
 	transition: padding-left  .3s ease;
 }
-/*end http://krewn.github.io/fits.css*/
