@@ -171,7 +171,7 @@ Template.Emailer.events({
     let bodyStr = encodeURI('content-type: text/html;<html><body><img src="'+image+'" alt="PostCard" /></body></html>');
     let mailHandle = 'mailto:'+destination+'?subject=PostCard';
     var download = document.createElement('a');
-    download.href = "data:"+image
+    download.href = "data:"+image;
     download.download = 'postCard.png';
     download.click();
     console.log(mailHandle);
