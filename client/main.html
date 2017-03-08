@@ -107,25 +107,25 @@
   <button id="newTextBoxBtn">More Text</button>
 </template>
 <template name = "TextBox">
-  <form action="/action_page.php">
+  <form id="TextBox">
     Text:<br>
-    <input type="text" name="Text" value="Your Message">
+    <input id="TextContent" type="text" name="Text" value="Your Message">
     <br>
     Width:<br>
-    <input type="number" name="TextWidth" value=250>
+    <input id="TextWidth" type="number" name="TextWidth" value=250>
     <br>
     LeftMargin:<br>
-    <input type="number" name="LeftMargin" value=15>
+    <input id="LeftMargin" type="number" name="LeftMargin" value=15>
     <br>
     TopMargin:<br>
-    <input type="number" name="TopMargin" value=15>
+    <input id="TopMargin" type="number" name="TopMargin" value=15>
     <br><br>
   </form>
 </template>
 
 <template name = "ImageSelector">
   {{#each images}}
-    <p>mk</p>
+    <p>{{this}}</p>
   {{/each}}
 </template>
 
