@@ -1,10 +1,10 @@
 Title		Story					Priority	Status
 ImgUpload	Jan drags and drops image into app.	High		Complete
 2ImgUpload	Juli adds several images to the app.	Medium		Incomplete
-TextAdd         Joe adds text to a selected image.	High		Incomplete
-EmailOutput	Jill emails Joe an Image+Text.		High		Incomplete
+TextAdd         Joe adds text to a selected image.	High		Complete
+EmailOutput	Jill emails Joe an Image+Text.		High		Complete
 WebCam		Jan Captures an image from her webcam	Medium-High	Incomplete
-TextPlacement	Joe adjusts the placement of text.	Medium		Incomplete
+TextPlacement	Joe adjusts the placement of text.	Medium		Complete
 		(Select text + click and drag corners)
 TextSize	Joe Scales the added text (+/-).	Medium		Incomplete
 TextColor	Jan Puts Orange text on her captured	Medium		Incomplete
@@ -19,7 +19,7 @@ EmailLogin	Jim logs-in with an email account.	Medium-Low	Complete
 G+Login		Juan logs-in with Google+.		Medium-Low	Complete
 Save Image	Juli saves a post card to her account	Medium-Low	Incomplete
 		for later.
-CropImage	Ajay crops an uploaded image sending.	Low		Complete
+CropImage	Ajay crops an uploaded image.		Low		Complete
 BWImage		Ajay makes his image black and white.	Low		Incomplete
 TextElimination	Steve upoloads a postcard and removes	Pin		Incomplete
 		the text.
