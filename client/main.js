@@ -167,7 +167,17 @@ Template.Emailer.events({
     let destination = target.email.value;
     let canvas = document.getElementById("myCanvas");
     let image = canvas.toDataURL();
-    console.log([destination,image]);
+    //console.log([destination,image]);
+    let bodyStr = encodeURI('content-type: text/html;<html><body><img src="'+image+'" alt="PostCard" /></body></html>');
+    let mailHandle = 'mailto:'+destination+'?subject=PostCard';
+    var download = document.createElement('a');
+    download.href = "data:"+image
+    download.download = 'postCard.png';
+    download.click();
+    console.log(mailHandle);
+    mailWindow = window.open(mailHandle,
+      "DescriptiveWindowName",
+      "resizable,scrollbars,status");
   }
 });
 Template.logo.helpers({
