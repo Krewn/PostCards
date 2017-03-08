@@ -120,6 +120,9 @@ Template.Cropper.events({
     canvas.setAttribute("data-top", parseInt(canvas.getAttribute("data-top"))+10);
     redraw(canvas);
   },
+  'click .refresh': function(event, template){
+    redraw(document.getElementById("myCanvas"));
+  },
 });
 Template.TextFactory.onCreated(function() {
   Session.set("TextFactoryTextBoxes", []);
@@ -156,6 +159,16 @@ Template.ImageSelector.helpers({
   addImage: function(i){
     sAppend("ImageSelectorImages",[i]);
   },
+});
+Template.Emailer.events({
+  'submit .emailer'(event){
+    event.preventDefault();
+    const target = event.target;
+    let destination = target.email.value;
+    let canvas = document.getElementById("myCanvas");
+    let image = canvas.toDataURL();
+    console.log([destination,image]);
+  }
 });
 Template.logo.helpers({
   logoSrc: function() {
