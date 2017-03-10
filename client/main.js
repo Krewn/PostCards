@@ -27,7 +27,7 @@ function redraw(c){
   let image = document.getElementById("img");
   let canvas = document.getElementById("myCanvas");
   let ctx = canvas.getContext("2d");
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  //ctx.clearRect(0, 0, canvas.width, canvas.height);
   ctx.drawImage(image, a, b);
   ctx.font = '28px serif';
   let elements = document.getElementById("TextBox");
