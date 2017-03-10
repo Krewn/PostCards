@@ -64,29 +64,27 @@
 <template name="PreviewCanvas">
   <canvas id="myCanvas" height=515 width = 350 data-left=0 data-top=0 data-cropperInc=10 style="border:1px solid #123456;"></canvas>
   <input id="inp" type='file'>
+  <input id="watermark" type="checkbox"><label for="watermark">WaterMark</label>
   <img id="img" width=0 height=0>
 </template>
 
 <template name = "Cropper">
-  <h3>Tools</h3>
+  <h3>Preview / Cropping -- Click the image to refresh.</h3>
   <table style="width:100%">
     <tr>
       <td></td>
-      <td width="25%" height="25%" class = "topPlus">+</td>
-      <td width="25%" height="25%" class = "topMinus">-</td>
+      <td width="25%" class = "topPlus">+</td>
+      <td width="25%" class = "topMinus">-</td>
       <td></td>
     </tr>
     <tr>
-      <td width="25%" height="25%" class = "leftPlus">+</td>
-      <td class = "refresh" colspan="2" rowspan="2" >{{> PreviewCanvas}}</td>
-      <td></td>
-      <td width="25%" height="25%" class = "rightPlus">+</td>
+      <td width="25%" class = "leftPlus">+</td>
+      <td class = "refresh" colspan="2"  rowspan="2">{{> PreviewCanvas}}</td>
+      <td width="25%" class = "rightPlus">+</td>
     </tr>
     <tr>
-      <td width="25%" height="25%" class = "leftMinus">-</td>
-      <td></td>
-      <td></td>
-      <td width="25%" height="25%" class = "rightMinus">-</td>
+      <td width="25%" class = "leftMinus">-</td>
+      <td width="25%" class = "rightMinus">-</td>
     </tr>
     <tr>
       <td></td>
@@ -128,7 +126,12 @@
 </template>
 
 <template name="logo">
-  <a href="/" alt="Home" onclick="s_objectID=&quot;http://kmbs.konicaminolta.us/_1&quot;;return this.s_oc?this.s_oc(e):true">
-    <img src={{logoSrc}} alt="IBM Logo">
-  </a>
+  <div class="list-group" style="float: right;">
+				<a class="button" href="https://krewn.github.io">My Page</a>
+				<a href="https://github.com/krewn" class="icon-link"><i class="fa fa-github fa-2x"></i></a>
+				<a href="https://www.linkedin.com/in/kevin-nelson-0a499980" class="icon-link"><i class="fa fa-linkedin fa-2x"></i></a>
+				<a href="https://www.facebook.com/Kevinb867" class="icon-link"><i class="fa fa-facebook fa-2x"></i></a>
+				<a href="https://twitter.com/freelancephilos" class="icon-link"><i class="fa fa-twitter fa-2x"></i></a>
+				<a href="https://soundcloud.com/kevin-nelson-328715190" class="icon-link"><i class="fa fa-soundcloud fa-2x"></i></a>
+			</div>
 </template>
