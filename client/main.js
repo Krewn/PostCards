@@ -21,6 +21,37 @@ import './main.html';
     },
   });
 */
+function makeLines(text,font,width,ctx){
+  ctx.font = font;
+  let spaces = [];
+  for(var k in text){
+    if(text[k]==" "){spaces.push(k);}
+  }
+  let lines = [];
+  let lastEnd = -1;
+  let lastk = 0;
+  for(var k in spaces){
+    if(ctx.measureText(text.slice(parseInt(lastEnd)+1,spaces[k])).width>width){
+      lines.push(text.slice(parseInt(lastEnd)+1,lastk));
+      lastEnd = lastk;
+    }
+    lastk = spaces[k];
+  }
+  lines.push(text.slice(parseInt(lastEnd)+1,text.Length));
+  return(lines);
+}
+function renderLines(lines,font,ctx,x,y){
+  ctx.font = font;
+  h = 40;
+  console.log(lines);
+  for(var k in lines){
+    console.log([lines[k], x, y+h*k]);
+    ctx.fillText(lines[k], x, y+h*k);
+  }
+}
+function tBox(ctx,TextContent,x,y,TextWidth){
+  renderLines(makeLines(TextContent,ctx.font,TextWidth,ctx),ctx.font,ctx,x,y);
+}
 function redraw(c){
   let a = parseInt(c.getAttribute("data-left"));
   let b = parseInt(c.getAttribute("data-top"));
@@ -43,15 +74,15 @@ function redraw(c){
   let TextWidth = parseInt(data[1]);
   let LeftMargin = parseInt(data[2]);
   let TopMargin = parseInt(data[3]);
-  console.log([TextContent,TextWidth,LeftMargin,TopMargin,a,b]);
-  ctx.fillText(TextContent, LeftMargin+a, TopMargin+b);
+  //console.log([TextContent,TextWidth,LeftMargin,TopMargin,a,b]);
+  tBox(ctx,TextContent, LeftMargin+a, TopMargin+b,TextWidth);
 }
 function sAppend(sname,anArray){
   let temp = Session.get(sname).slice(0);
   for(var i = 0; i < anArray.length; i++){
     temp.push(anArray[i]);
   }
-  Session.set("TextFactoryTextBoxes",temp);
+  Session.set(sname,temp);
 }
 Template.PreviewCanvas.events({
     'change input[type=file]'(event) {
@@ -68,7 +99,6 @@ Template.PreviewCanvas.events({
         let canvas = document.getElementById("myCanvas");
         let ctx = canvas.getContext("2d");
         image.onload = function() {
-            ctx.drawImage(image, 0, 0);
             redraw(document.getElementById("myCanvas"));
         };
       }
