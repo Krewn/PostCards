@@ -104,18 +104,34 @@
 </template>
 <template name = "TextBox">
   <form id="TextBox">
-    Text:<br>
-    <input id="TextContent" type="text" name="Text" value="Click Image to Refresh">
-    <br>
-    Width:<br>
-    <input id="TextWidth" type="number" name="TextWidth" value=250>
-    <br>
-    LeftMargin:<br>
-    <input id="LeftMargin" type="number" name="LeftMargin" value=15>
-    <br>
-    TopMargin:<br>
-    <input id="TopMargin" type="number" name="TopMargin" value=50>
-    <br><br>
+    <table style="width:100%">
+      <tr>
+        <td>
+          Text:<br>
+          <input id="TextContent" type="text" name="Text" value="Click Image to Refresh">
+          <br>
+          Width:<br>
+          <input id="TextWidth" type="number" name="TextWidth" value=250>
+          <br>
+          LeftMargin:<br>
+          <input id="LeftMargin" type="number" name="LeftMargin" value=15>
+          <br>
+          TopMargin:<br>
+          <input id="TopMargin" type="number" name="TopMargin" value=50>
+          <br>
+        </td>
+        <td>
+          Justify:<br>
+          <select>
+            <option value="LeftJustified">Left Justified</option>
+            <option value="RightJustified">Right Justified</option>
+            <option value="Centered">Centered</option>
+            <option value="FullyJustified">Fully Justified</option>
+          </select>
+          <br>
+        </td>
+      </tr>
+    </table>
   </form>
 </template>
 

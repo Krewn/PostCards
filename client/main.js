@@ -43,14 +43,65 @@ function makeLines(text,font,width,ctx){
 function renderLines(lines,font,ctx,x,y){
   ctx.font = font;
   h = 40;
-  console.log(lines);
   for(var k in lines){
-    console.log([lines[k], x, y+h*k]);
     ctx.fillText(lines[k], x, y+h*k);
   }
 }
-function tBox(ctx,TextContent,x,y,TextWidth){
-  renderLines(makeLines(TextContent,ctx.font,TextWidth,ctx),ctx.font,ctx,x,y);
+function renderLinesRightJustified(lines,font,ctx,x,y,TextWidth){
+  ctx.font = font;
+  h = 40;
+  for(var k in lines){
+    let offset = TextWidth-ctx.measureText(lines[k]).width;
+    ctx.fillText(lines[k], x+offset, y+h*k);
+  }
+}
+function renderLinesCentered(lines,font,ctx,x,y,TextWidth){
+  ctx.font = font;
+  h = 40;
+  for(var k in lines){
+    let offset = (TextWidth-ctx.measureText(lines[k]).width)/2;
+    ctx.fillText(lines[k], x+offset, y+h*k);
+  }
+}
+function getWords(line){
+  return(line.split(" "));
+}
+function renderLinesFullyJustified(lines,font,ctx,x,y,TextWidth){
+  ctx.font = font;
+  h = 40;
+  for(var k in lines){
+    let words = getWords(lines[k]);
+    let wordsWidth = 0;
+    for(var k2 in words){
+      wordsWidth+=ctx.measureText(words[k2]).width;
+    }
+    let nSpaces = ( words.length < 2 ? 1 : words.length-1 );
+    let spaceWidth = (TextWidth-wordsWidth)/nSpaces;
+    let spaceLeft = 0;
+    for(var k2 in words){
+      ctx.fillText(words[k2],x+spaceLeft,y+h*k);
+      spaceLeft+=spaceWidth+ctx.measureText(words[k2]).width;
+    }
+  }
+}
+function tBox(ctx,TextContent,x,y,TextWidth,Justice){
+  switch(Justice) {
+    case "RightJustified":
+        console.log("r");
+        renderLinesRightJustified(makeLines(TextContent,ctx.font,TextWidth,ctx),ctx.font,ctx,x,y,TextWidth);
+        break;
+    case "Centered":
+        console.log("c");
+        renderLinesCentered(makeLines(TextContent,ctx.font,TextWidth,ctx),ctx.font,ctx,x,y,TextWidth);
+        break;
+    case "FullyJustified":
+        console.log("f");
+        renderLinesFullyJustified(makeLines(TextContent,ctx.font,TextWidth,ctx),ctx.font,ctx,x,y,TextWidth);
+        break;
+    default:
+        console.log("l");
+        renderLines(makeLines(TextContent,ctx.font,TextWidth,ctx),ctx.font,ctx,x,y);
+  }
 }
 function redraw(c){
   let a = parseInt(c.getAttribute("data-left"));
@@ -74,8 +125,9 @@ function redraw(c){
   let TextWidth = parseInt(data[1]);
   let LeftMargin = parseInt(data[2]);
   let TopMargin = parseInt(data[3]);
+  let Justification = data[4];
   //console.log([TextContent,TextWidth,LeftMargin,TopMargin,a,b]);
-  tBox(ctx,TextContent, LeftMargin+a, TopMargin+b,TextWidth);
+  tBox(ctx,TextContent, LeftMargin+a, TopMargin+b,TextWidth,Justification);
 }
 function sAppend(sname,anArray){
   let temp = Session.get(sname).slice(0);
