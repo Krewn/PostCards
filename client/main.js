@@ -70,17 +70,21 @@ function renderLinesFullyJustified(lines,font,ctx,x,y,TextWidth){
   ctx.font = font;
   h = 40;
   for(var k in lines){
-    let words = getWords(lines[k]);
-    let wordsWidth = 0;
-    for(var k2 in words){
-      wordsWidth+=ctx.measureText(words[k2]).width;
-    }
-    let nSpaces = ( words.length < 2 ? 1 : words.length-1 );
-    let spaceWidth = (TextWidth-wordsWidth)/nSpaces;
-    let spaceLeft = 0;
-    for(var k2 in words){
-      ctx.fillText(words[k2],x+spaceLeft,y+h*k);
-      spaceLeft+=spaceWidth+ctx.measureText(words[k2]).width;
+    if(k==lines.length-1){
+      ctx.fillText(lines[k], x, y+h*k);
+    }else{
+      let words = getWords(lines[k]);
+      let wordsWidth = 0;
+      for(var k2 in words){
+        wordsWidth+=ctx.measureText(words[k2]).width;
+      }
+      let nSpaces = ( words.length < 2 ? 1 : words.length-1 );
+      let spaceWidth = (TextWidth-wordsWidth)/nSpaces;
+      let spaceLeft = 0;
+      for(var k2 in words){
+        ctx.fillText(words[k2],x+spaceLeft,y+h*k);
+        spaceLeft+=spaceWidth+ctx.measureText(words[k2]).width;
+      }
     }
   }
 }
