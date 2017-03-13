@@ -117,7 +117,7 @@ function redraw(c){
   let LeftMargin = getNumber("LeftMargin");
   let TopMargin = getNumber("TopMargin");
   let Justification = getValue("Justification");
-  //console.log([TextContent,TextWidth,LeftMargin,TopMargin,a,b]);
+  console.log([TextContent,TextWidth,LeftMargin,TopMargin,a,b]);
   tBox(ctx,TextContent, LeftMargin+a, TopMargin+b,TextWidth,Justification);
 }
 function sAppend(sname,anArray){
@@ -224,7 +224,7 @@ Template.TextBox.events({
 });
 Template.ImageSelector.onCreated(function() {
   Session.set( "ImageSelectorImages", []);
-  sAppend("ImageSelectorImages",["test"]) ;
+  sAppend("ImageSelectorImages",["This application is under development. Public alpha because super low key..."]) ;
 });
 Template.ImageSelector.helpers({
   images: function(){return(Array(Session.get("ImageSelectorImages")));},

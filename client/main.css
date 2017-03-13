@@ -1,6 +1,9 @@
 div{
     content:tabindex("0");
 }
+td{
+  transition: background  .3s ease;
+}
 td:hover {
   background: #cccccc;
 }
