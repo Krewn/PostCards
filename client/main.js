@@ -215,11 +215,8 @@ Template.TextFactory.events({
   },
 });
 Template.TextBox.events({
-  'submit': function(event){
-    redraw(document.getElementById("myCanvas"));
-  },
-  'keyup [class=TextBox]': function(event){
-    redraw(document.getElementById("myCanvas"));
+  "input input": function(e) {
+      redraw(document.getElementById("myCanvas"));
   },
 });
 Template.ImageSelector.onCreated(function() {
