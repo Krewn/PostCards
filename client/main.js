@@ -218,6 +218,9 @@ Template.TextBox.events({
   "input input": function(e) {
       redraw(document.getElementById("myCanvas"));
   },
+  "change": function(e) {
+      redraw(document.getElementById("myCanvas"));
+  },
 });
 Template.ImageSelector.onCreated(function() {
   Session.set( "ImageSelectorImages", []);
