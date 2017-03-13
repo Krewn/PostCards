@@ -6,13 +6,13 @@ EmailOutput	Jill emails Joe an Image+Text.		High		Complete
 WebCam		Jan Captures an image from her webcam	Medium-High	Incomplete
 TextPlacement	Joe adjusts the placement of text.	Medium		Complete
 		(Select text + click and drag corners)
-TextSize	Joe Scales the added text (+/-).	Medium		Incomplete
+TextSize	Joe Scales the added text (+/-).	Medium		Complete
 TextColor	Jan Puts Orange text on her captured	Medium		Incomplete
 		image.
-FontSelection	Ajay puts comic-sans text on his img.	Medium		Incomplete
+FontSelection	Ajay puts comic-sans text on his img.	Medium		Complete
 ColorPicker	Jan is provided a color pallet for	Medium		Incomplete
 		text color options.
-Justify		Jill emails Jan 3 versions of the same	Medium		Incomplete
+Justify		Jill emails Jan 3 versions of the same	Medium		Complete
 		postcard, one left justified, one right
 		and the third centered.
 EmailLogin	Jim logs-in with an email account.	Medium-Low	Complete
