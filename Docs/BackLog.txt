@@ -1,4 +1,34 @@
+Title		Story					Priority	Status 
+
+WebCam		Jan Captures an image from her webcam	High		Incomplete
+DisplayOutCrop 	While croping an image Katie can see 	Medium		Incomplete
+		the included portion full color and
+		the excluded portion shaded.
+ImageScale	Keith Uploads a hd image and reduces	Medium		Incomplete
+		the resolution.
+PostToMedia	Kyle logged in with social media posts	Medium		Incomplete
+		his post card.		
+2ImgUpload	Juli adds several images to the app.	low		Incomplete
+Save Image	Juli saves a post card to her account	Low		Incomplete
+BWImage		Ajay makes his image black and white.	Low		Incomplete
+TextElimination	Steve upoloads a postcard and removes	Pin		Incomplete
+Sociua
+
+<Archive>
+
+Sprint 1 -- End 3/13/2017
+Residule Items: 
+
+Title		Story					Priority	Status 
+
+WebCam		Jan Captures an image from her webcam	Medium-High	Incomplete
+2ImgUpload	Juli adds several images to the app.	Medium		Incomplete
+Save Image	Juli saves a post card to her account	Medium-Low	Incomplete
+BWImage		Ajay makes his image black and white.	Low		Incomplete
+TextElimination	Steve upoloads a postcard and removes	Pin		Incomplete
+
 Title		Story					Priority	Status
+
 ImgUpload	Jan drags and drops image into app.	High		Complete
 2ImgUpload	Juli adds several images to the app.	Medium		Incomplete
 TextAdd         Joe adds text to a selected image.	High		Complete
@@ -7,10 +37,10 @@ WebCam		Jan Captures an image from her webcam	Medium-High	Incomplete
 TextPlacement	Joe adjusts the placement of text.	Medium		Complete
 		(Select text + click and drag corners)
 TextSize	Joe Scales the added text (+/-).	Medium		Complete
-TextColor	Jan Puts Orange text on her captured	Medium		Incomplete
+TextColor	Jan Puts Orange text on her captured	Medium		Complete
 		image.
 FontSelection	Ajay puts comic-sans text on his img.	Medium		Complete
-ColorPicker	Jan is provided a color pallet for	Medium		Incomplete
+ColorPicker	Jan is provided a color pallet for	Medium		Complete
 		text color options.
 Justify		Jill emails Jan 3 versions of the same	Medium		Complete
 		postcard, one left justified, one right
@@ -23,3 +53,4 @@ CropImage	Ajay crops an uploaded image.		Low		Complete
 BWImage		Ajay makes his image black and white.	Low		Incomplete
 TextElimination	Steve upoloads a postcard and removes	Pin		Incomplete
 		the text.
+</Archive>

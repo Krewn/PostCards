@@ -1,26 +1,6 @@
 import { Template } from 'meteor/templating';
 import { Reactivevar } from 'meteor/reactive-var';
-
 import './main.html';
-
-/*
-	Template.hello.onCreated(function helloOnCreated() {
-	  // counter starts at 0
-	  this.counter = new ReactiveVar(0);
-	});
-
-	Template.hello.helpers({
-	  counter() {
-	    return Template.instance().counter.get();
-	  },
-	});
-  Template.hello.events({
-    'click button'(event, instance) {
-      // increment the counter when button is clicked
-      instance.counter.set(instance.counter.get() + 1);
-    },
-  });
-*/
 function makeLines(text,font,width,ctx){
   ctx.font = font;
   let spaces = [];
@@ -94,42 +74,28 @@ function renderLinesFullyJustified(lines,font,ctx,x,y,TextWidth){
 function tBox(ctx,TextContent,x,y,TextWidth,Justice){
   switch(Justice) {
     case "RightJustified":
-        console.log("r");
         renderLinesRightJustified(makeLines(TextContent,ctx.font,TextWidth,ctx),ctx.font,ctx,x,y,TextWidth);
         break;
     case "Centered":
-        console.log("c");
         renderLinesCentered(makeLines(TextContent,ctx.font,TextWidth,ctx),ctx.font,ctx,x,y,TextWidth);
         break;
     case "FullyJustified":
-        console.log("f");
         renderLinesFullyJustified(makeLines(TextContent,ctx.font,TextWidth,ctx),ctx.font,ctx,x,y,TextWidth);
         break;
     default:
-        console.log("l");
         renderLines(makeLines(TextContent,ctx.font,TextWidth,ctx),ctx.font,ctx,x,y);
   }
 }
+function getValue(elementID){
+  return(document.getElementById(elementID).value);
+}
+function getNumber(elementID){
+  return(parseInt(document.getElementById(elementID).value));
+}
 function getFont(){
-  let Font = document.getElementById("Font_Seletor").value;
-  let Size = document.getElementById("FontSize_Seletor").value;
-  console.log(Size+"px "+Font);
+  let Font = getValue("Font_Seletor");
+  let Size = getValue("FontSize_Seletor");
   return(Size+"px "+Font);
-}
-function getTextContnet(){
-  return(document.getElementById("TextContent").value);
-}
-function getTextWidth(){
-  return(parseInt(document.getElementById("TextWidth").value));
-}
-function getLeftMargin(){
-  return(parseInt(document.getElementById("LeftMargin").value));
-}
-function getTopMargin(){
-  return(parseInt(document.getElementById("TopMargin").value));
-}
-function getTheJustice(){
-  return(document.getElementById("Justification").value);
 }
 function redraw(c){
   //Drawing the image.
@@ -144,19 +110,13 @@ function redraw(c){
   //
   //Drwing the text.
   ctx.font = getFont();
-  /*let elements = document.getElementById("TextBox");
-  let data = [];
-  for (var i = 0; i < elements.length; i++) {
-    let temp = elements[i].value;
-    if(temp != "") {
-      data.push(temp);
-    }
-  }*/
-  let TextContent = getTextContnet();
-  let TextWidth = getTextWidth();
-  let LeftMargin = getLeftMargin();
-  let TopMargin = getTopMargin();
-  let Justification = getTheJustice();
+  let textColor = getValue("FontColor_Seletor");
+  ctx.fillStyle=textColor;
+  let TextContent = getValue("TextContent");
+  let TextWidth = getNumber("TextWidth");
+  let LeftMargin = getNumber("LeftMargin");
+  let TopMargin = getNumber("TopMargin");
+  let Justification = getValue("Justification");
   //console.log([TextContent,TextWidth,LeftMargin,TopMargin,a,b]);
   tBox(ctx,TextContent, LeftMargin+a, TopMargin+b,TextWidth,Justification);
 }
@@ -169,7 +129,6 @@ function sAppend(sname,anArray){
 }
 Template.PreviewCanvas.events({
     'change input[type=file]'(event) {
-      console.log(event);
       inp = document.getElementById("inp");
       if (inp.files && inp.files[0]) {
         let FR = new FileReader();
@@ -251,9 +210,7 @@ Template.TextFactory.helpers({
 });
 Template.TextFactory.events({
   'click #newTextBoxBtn': function(){
-    console.log("fired");
     sAppend("TextFactoryTextBoxes",["."]);
-    console.log(Session.get("TextFactoryTextBoxes"));
     redraw(document.getElementById("myCanvas"));
   },
 });
