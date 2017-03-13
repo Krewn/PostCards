@@ -40,16 +40,19 @@ function makeLines(text,font,width,ctx){
   lines.push(text.slice(parseInt(lastEnd)+1,text.Length));
   return(lines);
 }
+function getSize(font){
+  return(font.split(" ")[0].split("px")[0]);
+}
 function renderLines(lines,font,ctx,x,y){
   ctx.font = font;
-  h = 40;
+  h = getSize(font);
   for(var k in lines){
     ctx.fillText(lines[k], x, y+h*k);
   }
 }
 function renderLinesRightJustified(lines,font,ctx,x,y,TextWidth){
   ctx.font = font;
-  h = 40;
+  h = getSize(font);
   for(var k in lines){
     let offset = TextWidth-ctx.measureText(lines[k]).width;
     ctx.fillText(lines[k], x+offset, y+h*k);
@@ -57,7 +60,7 @@ function renderLinesRightJustified(lines,font,ctx,x,y,TextWidth){
 }
 function renderLinesCentered(lines,font,ctx,x,y,TextWidth){
   ctx.font = font;
-  h = 40;
+  h = getSize(font);
   for(var k in lines){
     let offset = (TextWidth-ctx.measureText(lines[k]).width)/2;
     ctx.fillText(lines[k], x+offset, y+h*k);
@@ -68,7 +71,7 @@ function getWords(line){
 }
 function renderLinesFullyJustified(lines,font,ctx,x,y,TextWidth){
   ctx.font = font;
-  h = 40;
+  h = getSize(font);
   for(var k in lines){
     if(k==lines.length-1){
       ctx.fillText(lines[k], x, y+h*k);
