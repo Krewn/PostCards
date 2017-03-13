@@ -107,7 +107,29 @@ function tBox(ctx,TextContent,x,y,TextWidth,Justice){
         renderLines(makeLines(TextContent,ctx.font,TextWidth,ctx),ctx.font,ctx,x,y);
   }
 }
+function getFont(){
+  let Font = document.getElementById("Font_Seletor").value;
+  let Size = document.getElementById("FontSize_Seletor").value;
+  console.log(Size+"px "+Font);
+  return(Size+"px "+Font);
+}
+function getTextContnet(){
+  return(document.getElementById("TextContent").value);
+}
+function getTextWidth(){
+  return(parseInt(document.getElementById("TextWidth").value));
+}
+function getLeftMargin(){
+  return(parseInt(document.getElementById("LeftMargin").value));
+}
+function getTopMargin(){
+  return(parseInt(document.getElementById("TopMargin").value));
+}
+function getTheJustice(){
+  return(document.getElementById("Justification").value);
+}
 function redraw(c){
+  //Drawing the image.
   let a = parseInt(c.getAttribute("data-left"));
   let b = parseInt(c.getAttribute("data-top"));
   let image = document.getElementById("img");
@@ -116,20 +138,22 @@ function redraw(c){
   let WaterMark = document.getElementById("watermark");
   if(!WaterMark.checked){ctx.clearRect(0, 0, canvas.width, canvas.height);}
   ctx.drawImage(image, a, b);
-  ctx.font = '28px serif';
-  let elements = document.getElementById("TextBox");
+  //
+  //Drwing the text.
+  ctx.font = getFont();
+  /*let elements = document.getElementById("TextBox");
   let data = [];
   for (var i = 0; i < elements.length; i++) {
     let temp = elements[i].value;
     if(temp != "") {
       data.push(temp);
     }
-  }
-  let TextContent = data[0];
-  let TextWidth = parseInt(data[1]);
-  let LeftMargin = parseInt(data[2]);
-  let TopMargin = parseInt(data[3]);
-  let Justification = data[4];
+  }*/
+  let TextContent = getTextContnet();
+  let TextWidth = getTextWidth();
+  let LeftMargin = getLeftMargin();
+  let TopMargin = getTopMargin();
+  let Justification = getTheJustice();
   //console.log([TextContent,TextWidth,LeftMargin,TopMargin,a,b]);
   tBox(ctx,TextContent, LeftMargin+a, TopMargin+b,TextWidth,Justification);
 }

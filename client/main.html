@@ -102,6 +102,7 @@
     </div>
   {{/each}}
 </template>
+
 <template name = "TextBox">
   <form id="TextBox">
     <table style="width:100%">
@@ -122,13 +123,22 @@
         </td>
         <td>
           Justify:<br>
-          <select>
+          <select id="Justification">
             <option value="LeftJustified">Left Justified</option>
             <option value="RightJustified">Right Justified</option>
             <option value="Centered">Centered</option>
             <option value="FullyJustified">Fully Justified</option>
           </select>
           <br>
+          Font:<br>
+          <select id="Font_Seletor">
+            <option value="Comic Sans MS">Comic Sans MS</option>
+            <option value="sans-serif">sans-serif</option>
+            <option value="Trebuchet MS">Trebuchet</option>
+            <option value="Courier New">Courier New</option>
+          </select><br>
+          Size:<br>
+          <input id="FontSize_Seletor" type="number" name="FontSize" value=28>
         </td>
       </tr>
     </table>
