@@ -9,15 +9,22 @@ function makeLines(text,font,width,ctx){
   }
   let lines = [];
   let lastEnd = -1;
-  let lastk = 0;
+  let lastk = -1;
   for(var k in spaces){
-    if(ctx.measureText(text.slice(parseInt(lastEnd)+1,spaces[k])).width>width){
-      lines.push(text.slice(parseInt(lastEnd)+1,lastk));
-      lastEnd = lastk;
+    if(ctx.measureText(text.slice(lastEnd+1,spaces[k])).width>width){
+      if(lastk != -1){
+          lines.push(text.slice(lastEnd+1,lastk));
+          lastEnd = lastk;
+      }
     }
-    lastk = spaces[k];
+    lastk = parseInt(spaces[k]);
   }
-  lines.push(text.slice(parseInt(lastEnd)+1,text.Length));
+  if(ctx.measureText(text.slice(parseInt(lastEnd)+1,text.length)).width>width){
+    lines.push(text.slice(lastEnd+1,spaces[spaces.length-1]));
+    lines.push(text.slice(parseInt(spaces[spaces.length-1])+1,text.length));
+  }else{
+    lines.push(text.slice(parseInt(lastEnd)+1,text.length));
+  }
   return(lines);
 }
 function getSize(font){
